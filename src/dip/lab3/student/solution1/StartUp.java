@@ -12,12 +12,20 @@ package dip.lab3.student.solution1;
 public class StartUp {
     public static void main(String[] args) {
         
-        InputStrategy keyboard = new KeyboardInput();
+        InputMessageStrategy keyboard = new KeyboardMessageInput();
         
-        OutputStrategy console = new JOptionPaneOutput();
+        OutputMessageStrategy console = new ConsoleMessageOutput();
+        
+        InputMessageStrategy email = new VerifyEmailMessageInput();
+        
+        OutputMessageStrategy jOption = new JOptionPaneMessageOutput();
         
         MessageService ms = new MessageService(keyboard, console);
         
+        MessageService ms2 = new MessageService(email, jOption);
+        
         ms.showMessage();
+        
+        ms2.showMessage();
     }
 }

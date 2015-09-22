@@ -9,6 +9,6 @@ package dip.lab3.student.solution1;
  *
  * @author Taylor
  */
-public interface OutputStrategy {
-    public abstract void showMessage(InputStrategy msg);
+public interface OutputMessageStrategy {
+    public abstract void showMessage(InputMessageStrategy msg);
 }

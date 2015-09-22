@@ -9,6 +9,6 @@ package dip.lab3.student.solution1;
  *
  * @author Taylor
  */
-public interface InputStrategy {
-    
+public interface InputMessageStrategy {
+    public abstract Message getMessage();
 }

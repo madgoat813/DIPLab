@@ -5,17 +5,16 @@
  */
 package dip.lab3.student.solution1;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Taylor
  */
-public class JOptionPaneOutput implements OutputStrategy{
+public class ConsoleMessageOutput implements OutputMessageStrategy{
 
     @Override
-    public void showMessage(InputStrategy msg) {
-        JOptionPane.showMessageDialog(null, msg);
+    public void showMessage(InputMessageStrategy message) {
+        Message msg = message.getMessage();
+        System.out.println(msg.getMsgAsString());
     }
     
 }

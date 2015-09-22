@@ -12,14 +12,18 @@ import java.util.Scanner;
  *
  * @author Taylor
  */
-public class KeyboardInput implements InputStrategy{
+public class KeyboardMessageInput implements InputMessageStrategy{
     
     
-    public String getMessage() {
+    
+
+    @Override
+    public Message getMessage() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your message");
         String msg = input.nextLine();
+        Message message = new Message(msg);
+        return message;
         
-        return msg;
     }
 }

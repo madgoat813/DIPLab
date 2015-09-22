@@ -7,13 +7,16 @@ package dip.lab3.student.solution1;
 
 /**
  *
- * @author Taylor
+ * @author tmcfall
  */
-public class ConsoleOutput implements OutputStrategy{
+public class VerifyEmailMessageInput implements InputMessageStrategy{
 
+    private final String verifyEmail = "Please Verify Your Email";
+    
     @Override
-    public void showMessage(InputStrategy msg) {
-        System.out.println(msg);
+    public Message getMessage() {
+           Message msg = new Message(verifyEmail);
+           return msg;
     }
     
 }

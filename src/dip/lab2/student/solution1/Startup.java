@@ -1,11 +1,7 @@
 package dip.lab2.student.solution1;
 
 // An useful import if you need it.
-import dip.lab2.*;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 // Another useful import if you need it.
-import javax.swing.JOptionPane;
 
 /**
  * Just a test class for input and output.
@@ -33,9 +29,9 @@ public class Startup {
         
         TipService ts2 = new TipService(calculator2);
         
-        System.out.println(String.format("%.2f", ts.getTip()));
+        System.out.println(String.format("The Tip is $%.2f", ts.getTip()));
         
-        System.out.println(String.format("%.2f", ts2.getTip()));
+        System.out.println(String.format("The Tip is $%.2f", ts2.getTip()));
     }
 
 }

@@ -10,10 +10,10 @@ package dip.lab3.student.solution1;
  * @author Taylor
  */
 public class MessageService {
-    private InputStrategy input;
-    private OutputStrategy output;
+    private InputMessageStrategy input;
+    private OutputMessageStrategy output;
 
-    public MessageService(InputStrategy input, OutputStrategy output) {
+    public MessageService(InputMessageStrategy input, OutputMessageStrategy output) {
         this.input = input;
         this.output = output;
     }
